@@ -10,7 +10,7 @@ const typesList = types.map(type => ({
   emoji: type.emoji
 }))
 
-const step_type = {
+export const step_type = {
   type: 'autocomplete',
   name: 'commit_type',
   message: 'Pick a commit type.',
@@ -18,7 +18,7 @@ const step_type = {
   fallback: 'No matched type.'
 }
 
-const step_message = {
+export const step_message = {
   type: 'text',
   name: 'commit_message',
   message: prev => {
@@ -33,14 +33,14 @@ const step_message = {
   }
 }
 
-const step_is_jira = {
+export const step_is_jira = {
   type: 'confirm',
   name: 'is_jira',
   message: 'Tag OWLPAY Jira issue ?',
   initial: false
 }
 
-const step_jira_id = {
+export const step_jira_id = {
   type: prev => prev ? 'number' : null,
   name: 'jira_id',
   message: 'Jira issue id',
@@ -55,7 +55,7 @@ const step_jira_id = {
   }
 }
 
-;(async () => {
+export const createCommit = async () => {
   let isCanceled = false
 
   const response = await prompts([
@@ -95,8 +95,12 @@ const step_jira_id = {
 
     console.log(chalk.green(result))
     console.log(chalk.bold(branchName), chalk.bgCyanBright.black(` ${branchHash} `))
+
+    return result
   } catch (error) {
     if (error.exitCode === 1) console.log(chalk.bgRed.white(' Nothing to commit. '))
     else console.error(error)
   }
-})()
+}
+
+createCommit()
