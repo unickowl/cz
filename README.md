@@ -1,11 +1,11 @@
-# create commit
+# CZ
 ![](https://img.shields.io/badge/node-%5E14.0.0-brightgreen)
 ![](https://img.shields.io/badge/npm-%5E8.0.0-brightgreen)
 ![](https://img.shields.io/badge/size-85%20kB-blue)
 
 create commit in human way.
 
-~~only apply for OWLPAY currently~~
+__only apply for OWLPAY currently__
 
 ## Install
 ```shell
@@ -17,6 +17,18 @@ yarn add global unickowl/cz
 
 #pnpm
 pnpm install -g unickowl/cz
+```
+
+## Uninstall
+```shell
+# npm
+npm install -g owlting_cz
+
+# yarn
+yarn add global owlting_cz
+
+#pnpm
+pnpm install -g owlting_cz
 ```
 
 
