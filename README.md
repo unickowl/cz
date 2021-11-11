@@ -1,4 +1,8 @@
 # create commit
+![](https://img.shields.io/badge/node-%5E14.0.0-brightgreen)
+![](https://img.shields.io/badge/npm-%5E8.0.0-brightgreen)
+![](https://img.shields.io/badge/size-8.5%20kB-blue)
+
 create commit in human way.
 
 ~~only apply for OWLPAY currently~~
@@ -14,7 +18,6 @@ yarn add global unickowl/cz
 #pnpm
 pnpm install -g unickowl/cz
 ```
-> requires node ^14
 
 
 ## Usage
