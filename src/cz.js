@@ -98,8 +98,8 @@ export const createCommit = async () => {
 
     return result
   } catch (error) {
-    if (error.exitCode === 1) console.log(chalk.bgRed.white(' Nothing to commit. '))
-    else console.error(error)
+    if (error.stderr) console.log(error.stderr)
+    else console.log(error)
   }
 }
 
