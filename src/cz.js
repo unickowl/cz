@@ -98,7 +98,8 @@ export const createCommit = async () => {
 
     return result
   } catch (error) {
-    if (error.stderr) console.log(error.stderr)
+    if (error.stdout) console.log(error.stdout)
+    else if (error.stderr) console.log(error.stderr)
     else console.log(error)
   }
 }
